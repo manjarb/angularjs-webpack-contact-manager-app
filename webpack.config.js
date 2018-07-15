@@ -13,7 +13,7 @@ const preprocessContext             = { ts : Date.now() };
 const entry = {
     index : [
         'babel-polyfill',
-        path.resolve(__dirname, 'src/app.module.js')
+        path.resolve(__dirname, 'src/app/app.module.js')
     ]
 };
 

@@ -11,10 +11,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@uirouter/angularjs": "^1.0.18",
     "angular": "^1.7.2",
     "angular-loading-bar": "^0.9.0",
     "angular-messages": "^1.7.2",
-    "angular-ui-router": "^1.0.18",
     "angularfire": "^2.3.0",
     "firebase": "^5.2.0"
   },
