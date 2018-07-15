@@ -1,0 +1,8 @@
+{
+  "presets": ["env"],
+  "plugins": [
+    "transform-regenerator",
+    "babel-plugin-syntax-async-functions",
+    "transform-object-rest-spread"
+  ]
+}

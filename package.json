@@ -5,9 +5,48 @@
   "main": "index.js",
   "scripts": {
     "build": "./node_modules/.bin/webpack --config webpack.build.config.js",
-    "start": "./node_modules/.bin/webpack-dev-server --config webpack.dev.config.js --mode=development --open"
+    "start": "./node_modules/.bin/webpack-dev-server --config webpack.dev.config.js --mode=development --open",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.7.2",
+    "angular-loading-bar": "^0.9.0",
+    "angular-messages": "^1.7.2",
+    "angular-ui-router": "^1.0.18",
+    "angularfire": "^2.3.0",
+    "firebase": "^5.2.0"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.7.2",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-syntax-async-functions": "^6.13.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-regenerator": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "babel-runtime": "^6.26.0",
+    "copy-webpack-plugin": "^4.5.2",
+    "css-loader": "^1.0.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.4.1",
+    "ng-annotate-loader": "^0.6.1",
+    "node-sass": "^4.9.2",
+    "path": "^0.12.7",
+    "postcss-loader": "^2.1.6",
+    "preprocess": "^3.1.0",
+    "raw-loader": "^0.5.1",
+    "sass-loader": "^7.0.3",
+    "sass-resources-loader": "^1.3.3",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.16.0",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4",
+    "webpack-file-preprocessor-plugin": "0.0.1"
+  }
 }
