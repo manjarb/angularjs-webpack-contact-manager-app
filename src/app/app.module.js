@@ -2,6 +2,7 @@
 import '../styles/main.scss';
 
 // Core Angular
+require('dotenv').config();
 import angular from 'angular';
 
 // Modules

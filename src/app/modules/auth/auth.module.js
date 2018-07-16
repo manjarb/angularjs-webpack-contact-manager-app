@@ -5,12 +5,12 @@ export default angular.module('auth', [
     ])
     .config(($firebaseRefProvider) => {
         const config = {
-            apiKey: "AIzaSyBwlWZIqkhgBaHG4c6JehZFX-mdqMIKUBI",
-            authDomain: "angularjs-contact-manager.firebaseapp.com",
-            databaseURL: "https://angularjs-contact-manager.firebaseio.com",
-            projectId: "angularjs-contact-manager",
-            storageBucket: "angularjs-contact-manager.appspot.com",
-            messagingSenderId: "821397040809"
+            apiKey: process.env.API_KEY,
+            authDomain: process.env.AUTH_DOMAIN,
+            databaseURL: process.env.DATABASE_URL,
+            projectId: process.env.PROJECT_ID,
+            storageBucket: process.env.STORAGE_BUCKET,
+            messagingSenderId: process.env.MESSAGING_SENDER_ID
         };
 
         $firebaseRefProvider
