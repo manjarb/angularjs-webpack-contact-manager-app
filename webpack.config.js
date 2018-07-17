@@ -111,5 +111,8 @@ module.exports = {
     module : modules, // Set to not conflict with module from module.exports,
     plugins,
     resolve,
-    optimization
+    optimization,
+    node: {
+        fs: 'empty'
+    }
 };

@@ -4,6 +4,7 @@ import '../styles/main.scss';
 // Core Angular
 require('dotenv').config();
 import angular from 'angular';
+import '@uirouter/angularjs';
 
 // Modules
 import CommonModule from './modules/common/common.module';

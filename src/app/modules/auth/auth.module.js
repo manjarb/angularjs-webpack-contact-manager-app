@@ -1,4 +1,7 @@
 import angular from 'angular';
+import * as firebase from 'firebase/app';
+import 'firebase/storage';
+import 'firebase/database';
 
 export default angular.module('auth', [
         'firebase'
