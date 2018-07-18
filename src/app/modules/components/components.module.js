@@ -1,3 +1,9 @@
 import angular from 'angular';
 
-export default angular.module('components', []);
+// Modules
+import ContactModule from './contact/contact.module';
+
+
+export default angular.module('components', [
+    ContactModule.name
+]);
