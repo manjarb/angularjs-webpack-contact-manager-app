@@ -4,8 +4,12 @@ import 'firebase/storage';
 import 'firebase/database';
 import 'angularfire';
 
+// Modules
+import AuthComponentModule from './components/login/login.component';
+
 export default angular.module('auth', [
-        'firebase'
+        'firebase',
+        AuthComponentModule.name
     ])
     .config(($firebaseRefProvider) => {
         const config = {
