@@ -33,4 +33,24 @@ export default angular.module('auth', [
 
         firebase.initializeApp(config);
     })
-    .service('AuthService', [AuthService]);
+    .service('AuthService', [AuthService])
+    .run(function ($transitions, $state, AuthService) {
+        $transitions.onStart({
+            to: function (state) {
+                return !!(state.data && state.data.requiredAuth);
+            }
+        }, function() {
+            return AuthService
+                .requireAuthentication()
+                .catch(function () {
+                    return $state.target('auth.login');
+                });
+        });
+        $transitions.onStart({
+            to: 'auth.*'
+        }, function () {
+            if (AuthService.isAuthenticated()) {
+                return $state.target('home');
+            }
+        });
+    });

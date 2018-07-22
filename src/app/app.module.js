@@ -10,6 +10,7 @@ import '@uirouter/angularjs';
 import CommonModule from './modules/common/common.module';
 import ComponentsModule from './modules/components/components.module';
 import AuthModule from './modules/auth/auth.module';
+import HomeModule from './modules/home/home.module';
 
 import { AppComponent } from "./app.component";
 
@@ -17,7 +18,8 @@ const dependencies = [
     'ui.router',
     AuthModule.name,
     CommonModule.name,
-    ComponentsModule.name
+    ComponentsModule.name,
+    HomeModule.name
 ];
 
 angular.module('app', dependencies)

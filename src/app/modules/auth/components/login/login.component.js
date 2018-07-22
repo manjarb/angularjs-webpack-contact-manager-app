@@ -30,7 +30,7 @@ export const LoginComponent = {
                 return this.authService
                     .login(event.user)
                     .then((user) => {
-                        this.state.go('app');
+                        this.state.go('home');
                     },(err) => {
                         console.log(err);
                     });

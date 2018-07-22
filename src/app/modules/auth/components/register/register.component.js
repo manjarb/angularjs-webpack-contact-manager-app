@@ -27,7 +27,7 @@ export const RegisterComponent = {
                 return this.authService
                     .register(event.user)
                     .then((user) => {
-                        this.state.go('app');
+                        this.state.go('home');
                     },(err) => {
                         console.log(err);
                     });
