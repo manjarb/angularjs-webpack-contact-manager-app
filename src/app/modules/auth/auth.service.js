@@ -16,6 +16,12 @@ export default class AuthService {
             .then(this.storeAuthData)
     }
 
+    login(user) {
+        return this.auth
+            .signInWithEmailAndPassword(user.email, user.password)
+            .then(this.storeAuthData)
+    }
+
     storeAuthData(res) {
         this.authData = res;
         return this.authData;

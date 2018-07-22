@@ -6,10 +6,32 @@ export const LoginComponent = {
     scope: {},
     template: require('./login.component.html'),
     controller: [
+        'AuthService',
         '$scope',
         class LoginController {
-            constructor($scope) {
+            constructor(AuthService, $scope) {
                 this.scope = $scope;
+                this.scope.user = {
+                    email: '',
+                    password: ''
+                };
+                this.authService = AuthService;
+
+                this.scope.loginUser = this.loginUser.bind(this);
+            }
+
+            $onInit() {
+            }
+
+            loginUser(event) {
+                console.log('ueueu');
+                return this.authService
+                    .login(event.user)
+                    .then((user) => {
+                        console.log('login success');
+                    },(err) => {
+                        console.log(err);
+                    });
             }
         }
     ]

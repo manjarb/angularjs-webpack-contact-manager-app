@@ -10,8 +10,8 @@ export const RegisterComponent = {
             constructor(AuthService, $scope) {
                 this.scope = $scope;
                 this.scope.user = {
-                    email: 'manjarm',
-                    password: '11591112'
+                    email: '',
+                    password: ''
                 };
                 this.authService = AuthService;
 
@@ -22,11 +22,10 @@ export const RegisterComponent = {
             }
 
             createUser(event) {
-                console.log('createuser');
                 return this.authService
                     .register(event.user)
                     .then((user) => {
-                        console.log(user, 'user registered');
+
                     },(err) => {
                         console.log(err);
                     });
