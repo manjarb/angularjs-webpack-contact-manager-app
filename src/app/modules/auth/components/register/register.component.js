@@ -23,14 +23,13 @@ export const RegisterComponent = {
 
             createUser(event) {
                 console.log('createuser');
-                console.log(this.authService);
-                /*return this.authService
+                return this.authService
                     .register(event.user)
                     .then((user) => {
                         console.log(user, 'user registered');
                     },(err) => {
                         console.log(err);
-                    });*/
+                    });
             }
         }
     ]

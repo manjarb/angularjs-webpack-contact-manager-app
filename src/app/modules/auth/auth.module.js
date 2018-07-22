@@ -1,7 +1,10 @@
+require('dotenv').config();
+
 import angular from 'angular';
 import * as firebase from 'firebase/app';
-import 'firebase/storage';
-import 'firebase/database';
+require('firebase/storage');
+require('firebase/database');
+require('firebase/auth');
 import 'angularfire';
 
 // Modules
@@ -30,4 +33,4 @@ export default angular.module('auth', [
 
         firebase.initializeApp(config);
     })
-    .service('AuthService', ['firebase', AuthService]);
+    .service('AuthService', [AuthService]);

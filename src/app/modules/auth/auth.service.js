@@ -1,12 +1,10 @@
-import 'firebase/app';
-import 'firebase/storage';
-import 'firebase/database';
+import * as firebase from 'firebase'
 import 'angularfire';
 
 export default class AuthService {
-    constructor($firebaseAuth) {
-        console.log($firebaseAuth);
-        this.auth = $firebaseAuth();
+    constructor() {
+        this.auth = firebase.auth();
+        // console.log(firebase.auth());
         this.authData = null;
         this.register = this.register.bind(this);
         this.storeAuthData = this.storeAuthData.bind(this);
@@ -14,7 +12,7 @@ export default class AuthService {
 
     register(user) {
         return this.auth
-            .$createUserWithEmailAndPassword(user.email, user.password)
+            .createUserWithEmailAndPassword(user.email, user.password)
             .then(this.storeAuthData)
     }
 

@@ -28,8 +28,6 @@ export const AuthFormComponent = {
             }
 
             submitForm() {
-                console.log('submitform');
-                console.log(this.$ctrl);
                 this.$ctrl.onSubmit({
                     $event: {
                         user: this.scope.user

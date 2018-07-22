@@ -9,6 +9,7 @@ const WebpackFilePreprocessorPlugin = require('webpack-file-preprocessor-plugin'
 const CopyWebpackPlugin             = require('copy-webpack-plugin');
 const devtool                       = 'source-map';
 const preprocessContext             = { ts : Date.now() };
+const Dotenv                        = require('dotenv-webpack');
 
 const entry = {
     index : [
@@ -79,7 +80,9 @@ const plugins = [
     new CopyWebpackPlugin([{
         from: 'src/assets',
         to: 'assets'
-    }])
+    }]),
+
+    new Dotenv()
 ];
 
 const resolve = {
