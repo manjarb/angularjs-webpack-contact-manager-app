@@ -8,9 +8,11 @@ export const LoginComponent = {
     controller: [
         'AuthService',
         '$scope',
+        '$state',
         class LoginController {
-            constructor(AuthService, $scope) {
+            constructor(AuthService, $scope, $state) {
                 this.scope = $scope;
+                this.state = $state;
                 this.scope.user = {
                     email: '',
                     password: ''
@@ -28,7 +30,7 @@ export const LoginComponent = {
                 return this.authService
                     .login(event.user)
                     .then((user) => {
-                        console.log('login success');
+                        this.state.go('app');
                     },(err) => {
                         console.log(err);
                     });

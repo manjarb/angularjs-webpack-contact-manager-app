@@ -6,9 +6,11 @@ export const RegisterComponent = {
     controller: [
         'AuthService',
         '$scope',
+        '$state',
         class RegisterController {
-            constructor(AuthService, $scope) {
+            constructor(AuthService, $scope, $state) {
                 this.scope = $scope;
+                this.state = $state;
                 this.scope.user = {
                     email: '',
                     password: ''
@@ -25,7 +27,7 @@ export const RegisterComponent = {
                 return this.authService
                     .register(event.user)
                     .then((user) => {
-
+                        this.state.go('app');
                     },(err) => {
                         console.log(err);
                     });
