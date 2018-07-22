@@ -6,6 +6,7 @@ import 'angularfire';
 
 // Modules
 import AuthComponentModule from './components/login/login.component';
+import AuthService from "./auth.service";
 
 export default angular.module('auth', [
         'firebase',
@@ -29,3 +30,4 @@ export default angular.module('auth', [
 
         firebase.initializeApp(config);
     })
+    .service('AuthService', ['firebase', AuthService]);

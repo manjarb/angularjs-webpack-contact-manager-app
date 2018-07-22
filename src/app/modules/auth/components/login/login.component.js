@@ -1,7 +1,9 @@
 import angular from 'angular';
 import {RegisterComponent} from "../register/register.component";
+import {AuthFormComponent} from "../auth-form/auth-form.component";
 
 export const LoginComponent = {
+    scope: {},
     template: require('./login.component.html'),
     controller: [
         '$scope',
@@ -35,4 +37,5 @@ export default angular.module('auth.components', [])
                 url: '/register',
                 component: 'register'
             })
-    });
+    })
+    .component('authForm', AuthFormComponent);

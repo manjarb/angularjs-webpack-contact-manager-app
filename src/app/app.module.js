@@ -12,6 +12,7 @@ import ComponentsModule from './modules/components/components.module';
 import AuthModule from './modules/auth/auth.module';
 
 import { AppComponent } from "./app.component";
+import AuthService from "./modules/auth/auth.service";
 
 const dependencies = [
     'ui.router',

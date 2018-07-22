@@ -1,14 +1,15 @@
 <div class="auth">
-    <h1>Register</h1>
+    <h1>Register 2</h1>
+    <pre>{{ user | json }}</pre>
     <auth-form
-            user="$ctrl.user"
-            message="{{ $ctrl.error }}"
-            button="Create user"
-            on-submit="$ctrl.createUser($event);">
+        user="user"
+        message="{{ error }}"
+        button="Create user"
+        on-submit="createUser($event);">
     </auth-form>
 </div>
 <div class="auth__info">
     <a ui-sref="auth.login">
-        Already have an account? Login here.
+        Don't have an account? Click one here.
     </a>
 </div>
