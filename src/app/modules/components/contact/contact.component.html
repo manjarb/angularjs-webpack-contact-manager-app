@@ -1,0 +1,16 @@
+<div class="contact-card">
+    <a
+            href=""
+            class="contact-card__link"
+            ng-click="selectContact()">
+        <div class="contact-card__column contact-card__column--name">
+            {{ ::contact.name }}
+            <span class="contact-card__pill contact-card__pill--{{ ::contact.tag }}">
+        {{ ::contact.tag }}
+      </span>
+        </div>
+        <div class="contact-card__column contact-card__column--email">
+            {{ ::contact.email }}
+        </div>
+    </a>
+</div>

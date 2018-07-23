@@ -1,6 +1,6 @@
 import angular from 'angular';
-import {RegisterComponent} from "../register/register.component";
-import {AuthFormComponent} from "../auth-form/auth-form.component";
+import { RegisterComponent } from "../register/register.component";
+import { AuthFormComponent } from "../auth-form/auth-form.component";
 
 export const LoginComponent = {
     scope: {},
@@ -26,7 +26,6 @@ export const LoginComponent = {
             }
 
             loginUser(event) {
-                console.log('ueueu');
                 return this.authService
                     .login(event.user)
                     .then((user) => {

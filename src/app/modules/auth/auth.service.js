@@ -1,5 +1,5 @@
-import * as firebase from 'firebase'
-import 'angularfire';
+import * as firebase from 'firebase';
+require('firebase/auth');
 
 export default class AuthService {
     constructor() {
@@ -34,6 +34,7 @@ export default class AuthService {
     }
 
     requireAuthentication() {
+        console.log(this.auth.waitForSignIn);
         return this.auth
             .$waitForSignIn().then(this.onSignIn);
     }
@@ -44,7 +45,7 @@ export default class AuthService {
 
     onSignIn(user) {
         this.authData = user;
-        return auth.$requireSignIn();
+        return this.auth.$requireSignIn();
     }
 
     getUser() {
@@ -56,7 +57,7 @@ export default class AuthService {
     logout() {
         return this.auth
             .signOut()
-            .then(clearAuthData);
+            .then(this.clearAuthData);
     }
 
     clearAuthData() {
